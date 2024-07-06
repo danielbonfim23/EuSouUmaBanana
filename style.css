@@ -1,0 +1,45 @@
+*, 
+*:after,
+*:before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+body{
+    font-size: 100%;
+    list-style-type: none;
+    
+}
+
+.formulario{
+    display: flex;
+    left: 10px;
+    position: relative;
+    top: 10px;
+}
+.jogadores{
+    display: flex;
+    flex-direction: column;
+    left: 10px;
+    position: relative;
+    top: 20px;
+}
+.filhos{
+    display: flex;
+    flex-direction: row;
+}
+#botao__jogar{
+    position: relative;
+    left: 100px;
+}
+#botao__esconder{
+    position: absolute;
+    left: 296px;
+    top: 100px;
+}
+h2{
+    position: absolute;
+    left: 359px;
+    top:160px;
+}
