@@ -2,7 +2,7 @@ let jogadores = [];
 let palavras = [];
 let palavraParaJogadores = [];
 
-const endpointDaAPI = 'dicionario.json';
+const endpointDaAPI = 'https://danielbonfim23.github.io/EuSouUmaBanana/dicionario.json';
 getBuscarPalavras ();
 
 async function getBuscarPalavras() {
@@ -45,15 +45,17 @@ function jogar() {
 }
 
 function mostrar(element) {
+
+    
     let nomeJogador = element.value;
     let index = jogadores.findIndex((element) => element === nomeJogador);
-    console.log(jogadores[index])
 
     let palavraNaTela = document.querySelector('h2');
-    palavraNaTela.innerHTML = palavraParaJogadores[index].palavra;
-}
+    if (palavraNaTela.textContent == '') {
+        palavraNaTela.innerHTML = palavraParaJogadores[index].palavra;
 
-function esconder() {
-    let palavraNaTela = document.querySelector('h2');
-    palavraNaTela.innerHTML = '';
+    } else {
+        palavraNaTela.innerHTML = '';
+    }
+    
 }
